@@ -1,19 +1,15 @@
 from django.contrib import admin
 from django.urls import path, include
 from . import views
-# from rest_framework.routers import DefaultRouter
-
-# router = DefaultRouter()
-# router.register(r'weekly/menu/', views.CreateWeekMenuView)
-# router.register(r'v1/empployee/', views.CreateEmployeeView)
 
 
 urlpatterns = [
-    path('auth/', views.RegisterView.as_view(), name='auth'),
-    path('create/v1/restaurant/', views.CreateRestaurantView.as_view(), name='create_restaurant'),
-    path('create/v1/employee/', views.CreateEmployeeView.as_view(), name='create_employee'),
-    path('current/day/v1/menu/', views.GetCurrentDayMenuView.as_view(), name='current_day_menu'),
-    path('rest/week/menu/', views.RestaurantWeekMenuView.as_view(), name='restaurant_week_menu')
-    # path('', include(router.urls)),
+    path('register/', views.RegisterView.as_view(), name='register'),
+    path('create/restaurant/', views.CreateRestaurantView.as_view(), name='create-restaurant'),
+    path('create/employees/', views.CreateEmployeeView.as_view(), name='create-employee'),
+    path('restaurant/menu/', views.RestaurantWeekMenuView.as_view(), name='get_restaurant_week_menu'),
+    path('menus/today/', views.CurrentDayMenuView.as_view(), name='get-current-day-menu'),
+    path('menus/vote/<int:menu_id>/', views.VoteMenuView.as_view(), name='vote_menu'),
+    path('menus/current-day-votes/', views.MenuOfDayView.as_view(), name='current-day-votes'),
 ]
 
