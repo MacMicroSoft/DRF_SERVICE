@@ -91,5 +91,8 @@ docker compose up
 
 3. **Using Swagger UI:**
    This app provides Swagger UI for easy interaction. Access it at:
+   http://127.0.0.1:8000/api/schema/redoc/
+   or
    http://127.0.0.1:8000/api/schema/swagger-ui/
+
 
