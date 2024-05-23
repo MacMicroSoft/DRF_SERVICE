@@ -22,11 +22,12 @@
      source venv/bin/activate
 
 4. Install the required dependencies:
+ ```plaintext
    pip install -r requirements.txt
-
-5. Create a .env file
+```
+6. Create a .env file
 Into .env file write :
-
+```plaintext
 SECRET_KEY=your_secret_key
 DEBUG=True
 DB_NAME=your_db_name
@@ -35,21 +36,23 @@ DB_USER=your_user
 DB_PASSWORD=your_pass
 DB_HOST=your_host
 DB_PORT=your_port
-
+```
 
 6. Run migrations
+```plaintext
 python manage.py makemigrations
 python manage.py migrate
-
-7. Run application
+```
+8. Run application
+```plaintext
 python manage.py runserver
-
+```
 
 ### Installation Steps (**Docker**)###
  
 
 1. Create .env file with that data:
-
+```plaintext
 SECRET_KEY=your_secret_key
 DEBUG=True
 DB_NAME=postgres
@@ -58,16 +61,21 @@ DB_USER=postgres
 DB_PASSWORD=postgres
 DB_HOST=db
 DB_PORT=5432
-
-2. Run command -
+```
+2. Run command
+```plaintext
 docker-compose up -d db
+```
 
-3. Run command -
+4. Run command
+```plaintext
 docker compose build
+```
 
-4. Run command -
+5. Run command
+```plaintext
 docker compose up
-
+```
 
 # Start work with app
 
