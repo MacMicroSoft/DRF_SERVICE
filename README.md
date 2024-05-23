@@ -59,13 +59,13 @@ DB_PASSWORD=postgres
 DB_HOST=db
 DB_PORT=5432
 
-2. Run command
+2. Run command -
 docker-compose up -d db
 
-3. Run command
+3. Run command -
 docker compose build
 
-4. Run command
+4. Run command -
 docker compose up
 
 
